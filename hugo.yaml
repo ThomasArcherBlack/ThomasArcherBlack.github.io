@@ -1,0 +1,30 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: 
+copyright: © Thomas Archer-Black 2025
+theme: ["PaperMod"]
+
+params:
+  profileMode:
+    enabled: true
+    title: "Thomas Archer-Black" #
+    subtitle: "Widlife Biologist | ASU B.S. Biological Sciences | Suzuki Lab & AZGFD"
+    imageUrl: "/pfp.png" # optional
+    #  imageTitle: "<title of image as alt>" # optional
+    # imageWidth: 120 # custom size
+    # imageHeight: 120 # custom size
+    buttons:
+      - name: Portfolio
+        url: "/Projects/Home"
+      - name:  Experience
+        url: "/Experience/  "   
+      - name: About
+        url: "/About/"
+  socialIcons: # optional
+   - name: "LinkedIn"
+     url: "https://linkedin.com/in/thomas-archer-black"
+   - name: "Github"
+     url: "https://github.com/ThomasArcherBlack"
+   - name: "Email"
+     url: "mailto:thomasa.png@gmail.com"
+

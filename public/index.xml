@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title></title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on </description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en-us</language>
+    <copyright>Thomas Archer-Black 2025</copyright>
+    <lastBuildDate>Tue, 04 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flint Michigan Water Quality</title>
+      <link>http://localhost:1313/projects/flint/</link>
+      <pubDate>Tue, 04 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/flint/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/Projects/Home/&#34;&gt;&amp;lt; Back to Portfolio&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This project uses data gathered by the Michigan department of environmental quality and Virginia Tech.
+My personal goal with this project was to implement a new type of plot (violin) and to improve my
+labeling clarity.&lt;/p&gt;
+&lt;p&gt;This plot uses a logarithmic scale to keep the plot in a form that can be read at a glance:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; scale_y_log10(
+        breaks = c(0.01, 1, 10, 100),
+        labels = c(&amp;#34;0&amp;#34;, &amp;#34;1&amp;#34;, &amp;#34;10&amp;#34;, &amp;#34;100&amp;#34;)) +
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img alt=&#34;Flint Michigan Water Quality&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Projects/Plots/Flint.png&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>British Literary Prize Winners</title>
+      <link>http://localhost:1313/projects/literature/</link>
+      <pubDate>Tue, 28 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/literature/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/Projects/Home/&#34;&gt;&amp;lt; Back to Portfolio&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This particular project utilized a data set consisting of personal information from winners of various
+noteable literature prizes over time. As someone who almost chose English as a college major, I thought
+it would be interesting to see what the &amp;ldquo;best&amp;rdquo; education is for an author. Obviously these results are skewed,
+as those who already enjoy writing are more likely to take subjects related to it in post-secondary education.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Global Tuberculosis Stats</title>
+      <link>http://localhost:1313/projects/tuberculosis/</link>
+      <pubDate>Tue, 28 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/tuberculosis/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/Projects/Home/&#34;&gt;&amp;lt; Back to Portfolio&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In this plot I chose to create lines showing the estimate mortality rate from all countries since 2008.
+After generating this, I noted Eswatini as a line of interest, and emphasized it using color and label.&lt;/p&gt;
+&lt;p&gt;This project is my first time using the ggrepel() function, and I will be continuing to learn with it as I found
+it very useful, as shown below:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;geom_label_repel(
+    data = label, 
+    aes(label = country, y = e_mort_100k, x = year), 
+    nudge_x = 3, 
+    segment.colour = &amp;#34;grey50&amp;#34;, 
+    segment.size = 0.5,
+    min.segment.length = 0,
+    segment.alpha = 1,
+    force = 5
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img alt=&#34;TB Stats&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Projects/Plots/TB.png&#34;&gt;
+Below is the full code for this plot:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Crane Observations</title>
+      <link>http://localhost:1313/projects/cranes/</link>
+      <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/cranes/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/Projects/Home/&#34;&gt;&amp;lt; Back to Portfolio&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This plot demonstrates how cranes at a specific lake in Sweden are changing the time of their migration
+year over year.&lt;/p&gt;
+&lt;p&gt;While creating this plot, I referenced material from a Tidy Tuesday creator. This allowed me to
+build an understanding of how to use the geom_segment function effectively.&lt;/p&gt;
+&lt;p&gt;A key challenge here was formating date data in a way that would generate a proper graph:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cranes &amp;lt;- cranes |&amp;gt; mutate(
+  md = make_date(year = 2000, month = month(ymd), day = day(ymd)))
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In future projects I hope to continue improving my use of the mutate function as it is incredibly powerful.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/projects/z/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/z/</guid>
+      <description>&lt;p&gt;f&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About Me</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/&#34;&gt;&amp;lt; Back to Home&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Hi!, I&amp;rsquo;m Thomas, a Senior at Arizona State graduating this Spring with a degree in
+Biological Sciences. I am incredibly passionate about the worlds of natural resources
+and conservation. If you&amp;rsquo;re interested in my previous professional experiences regarding
+these fields, please check my &lt;a href=&#34;http://localhost:1313/Experience/&#34;&gt;experiences&lt;/a&gt; page!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;I&amp;rsquo;ve lived in Arizona my entire life, but I&amp;rsquo;m very excited about the potential to try out new
+places after graduating. Arizona was the perfect place for my outdoors hobies to take root, as the
+weather allowed constant backpacking and hiking trips whenever I wanted.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Experience</title>
+      <link>http://localhost:1313/experience/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/experience/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/&#34;&gt;&amp;lt; Back to Home&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;arizona-game-and-fish-department&#34;&gt;Arizona Game and Fish Department&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;I have been fortunate enough to spend two summers with the Game and Fish Department. I hope to use
+this space to share some things I&amp;rsquo;ve learned that don&amp;rsquo;t fit on a &lt;a href=&#34;http://localhost:1313/Resume&#34;&gt;resume&lt;/a&gt; or on LinkedIn.&lt;/p&gt;
+&lt;p&gt;My first summer internship focused mostly on data management, where I cataloged over 500,000 rows of
+sport fish data, some entries older than 1950. This was a great first exposure to the field of wildlife
+biology as it allowed me to have exposure to lots of content from the field. My amazing supervisor, Triska Hoover
+made sure to set up opportunities for me to help out fieldwork teams within the department, allowing me to see what
+working with many different species was like.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Portfolio</title>
+      <link>http://localhost:1313/projects/home/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/home/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/&#34;&gt;&amp;lt; Back to Home&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Below are page links to various small coding projects/R graphs that I have created.
+I&amp;rsquo;ve done my best to include accreditations for resources used, however it should be made clear that
+most of the datasets are courtesy the &lt;a href=&#34;https://github.com/rfordatascience/tidytuesday&#34;&gt;Tidy Tuesday&lt;/a&gt; project.&lt;/p&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/Projects/Cranes/&#34;&gt;Crane Observations at Lake Hornborgasjön, Sweden&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/Projects/Literature/&#34;&gt;British Literary Prize Winners&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/Projects/Flint/&#34;&gt;Flint Michigan Water Quality&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/Projects/Tuberculosis/&#34;&gt;Global Tuberculosis Stats&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Resume</title>
+      <link>http://localhost:1313/resume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resume/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/Experience&#34;&gt;&amp;lt; Back to Experience&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/ThomasResume.pdf&#34;&gt;Here is a link to a PDF of my resume&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
